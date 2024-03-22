@@ -49,9 +49,11 @@ header {
 #menu-btn-label {
   display: none;
 }
+main {
+  padding-inline: 10px;
+}
 
 section {
-  padding-inline: 1.5rem;
   width: 100%;
 }
 
@@ -98,10 +100,6 @@ section {
   color: var(--primary-blue);
 }
 
-main {
-  padding-inline: 5px;
-}
-
 .about-section {
   display: flex;
   align-items: center;
@@ -125,6 +123,7 @@ main {
   flex-direction: column;
   align-items: start;
   gap: 10px;
+  padding-inline: 10px;
   color: var(--primary-black);
 }
 
@@ -146,6 +145,115 @@ main {
   border-radius: 10px;
 }
 
+.education-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.education-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.education-details {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.education-details .line {
+  width: 10px;
+  height: calc(5 * 90px);
+  border-radius:10px ;
+  background-color: var(--secondary-background);
+  position: relative;
+}
+
+.education-depth-details {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 500px;
+}
+
+.education-depth-details div {
+  display: flex;
+  flex-direction: column;
+  transform-origin: center;
+  position: absolute;
+}
+
+.education-depth-details div:nth-child(1) {
+  top: 45px;
+  right: calc(50% + 25px);
+}
+.education-depth-details div:nth-child(2) {
+  top: 135px;
+  left: calc(50% + 25px);
+}
+
+.education-depth-details div:nth-child(3) {
+  bottom: 185px;
+  right: calc(50% + 25px);
+}
+
+.education-depth-details div:nth-child(4) {
+  bottom: 90px;
+  left: calc(50% + 25px);
+}
+
+.education-depth-details div::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-orange);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.education-depth-details div:nth-child(odd)::after {
+  right: -30px;
+}
+.education-depth-details div:nth-child(even)::after {
+  left: -30px;
+}
+
+.education-depth-details div span {
+  color: var(--light-grey);
+  text-wrap: stable;
+  width: 200px;
+}
+
+.education-container div:nth-child(odd) span {
+  text-align: right;
+}
+.education-container div:nth-child(even) span {
+  text-align: left;
+}
+
+b{
+  color: var(--primary-orange);
+}
+
+.education-image-container {
+  width: 40%;
+}
+
+.education-image-container img {
+  width: 100%;
+}
+
+
+
 .project-section {
   display: flex;
   flex-direction: column;
@@ -159,6 +267,7 @@ main {
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+  justify-content: space-between;
 }
 
 .project-container div {
@@ -172,13 +281,25 @@ main {
   position: relative;
 }
 
+.project-container div:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000008c;
+  z-index: 1;
+}
+
 .project-name {
   border: 1px solid var(--primary-orange);
-  width: 90%;
+  width: 80%;
   padding: 8px 5px;
-  background-color: #00000071;
+  background-color: #000000a9;
   border-radius: 10px;
   transition: background-color 0.25s;
+  z-index: 2;
 }
 
 .project-name:hover {
@@ -188,6 +309,8 @@ main {
 .project-anchor {
   text-decoration: none;
   color: var(--primary-orange);
+  font-size: 1rem;
+  font-weight: 500;
   transition: color 0.25s;
 }
 
@@ -205,7 +328,7 @@ main {
   background: url(assest/amazon.jpg) center/cover;
 }
 .project-4 {
-  background: url(assest/amazon.jpg) center/cover;
+  background: url(assest/netflix.jpg) center/cover;
 }
 
 .resume-section {
@@ -298,6 +421,40 @@ main {
   .hero-image {
     max-width: 100%;
   }
+
+  .education-image-container{
+    display: none;
+  }
+  .education-depth-details div:nth-child(odd)::after {
+    right: -20px;
+  }
+  .education-depth-details div:nth-child(even)::after {
+    left: -20px;
+  }
+  .education-depth-details div:nth-child(1) {
+    top: 45px;
+    right: calc(50% + 15px);
+  }
+  .education-depth-details div:nth-child(2) {
+    top: 135px;
+    left: calc(50% + 15px);
+  }
+  
+  .education-depth-details div:nth-child(3) {
+    bottom: 185px;
+    right: calc(50% + 15px);
+  }
+  
+  .education-depth-details div:nth-child(4) {
+    bottom: 90px;
+    left: calc(50% + 15px);
+  }
+
+  .education-depth-details div span {
+    font-size: .8rem;
+    text-wrap: nowrap;
+  }
+
   .project-container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -363,6 +520,12 @@ main {
 
   .section-title {
     align-self: center;
+  }
+
+  .education-depth-details div span {
+    font-size: .7rem;
+    text-wrap: wrap;
+    width: 150px;
   }
 
   .project-container {
