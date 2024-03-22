@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Portfolio</h1>
+      <label for="menu-btn" id="menu-btn-label"
+        ><i class="fa-solid fa-bars"></i
+      ></label>
+      <input type="checkbox" name="" id="menu-btn" />
+      <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="hero-image-container">
+          <img class="hero-image" src="assest/hero.png" alt="" />
+        </div>
+        <div class="hero-text">
+          <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+          <h1 id="hero-name">Hello, I'm<span id="hero-name-text"></span></h1>
+          <h3 id="hero-subtext1">
+            Passionate Web Developer Crafting digital wonders with code.
+          </h3>
+          <h3 id="hero-subtext2">
+            Let's build something extraordinary together!
+          </h3>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div class="about-section-image-container">
+          <img src="assest/about.png" alt="" />
+        </div>
+        <div class="about-section-details" id="about">
+          <h1 class="about-title section-title">About me</h1>
+          <p>
+            Hi, My name is Karthikeyan. I am a Full stack web developer. I build
+            beautiful Websites with React.js , Sass CSS + Bootstrap
+          </p>
+          <p>
+            I am proficient in Frontend skills like HTML5, CSS3, Javascript,
+            Sass, Bootstrap, jQuery, ReactJs many more.
+          </p>
+          <p>In backend I know Java, Spring Boot and MySql</p>
+        </div>
+      </section>
+
+      <section class="project-section" id="project">
+        <h1 class="project-title section-title">Projects</h1>
+        <div class="project-container">
+          <div class="project-1">
+            <h3 class="project-name">
+              <a
+                class="project-anchor"
+                href="https://karthikeyanselvam18.github.io/random-joke-generator-app/"
+                target="_blank"
+                >Joke generator</a
+              >
+            </h3>
+          </div>
+          <div class="project-2">
+            <h3 class="project-name">
+              <a
+                class="project-anchor"
+                href="https://karthikeyanselvam18.github.io/todo-list/"
+                target="_blank"
+                >To-do List</a
+              >
+            </h3>
+          </div>
+          <div class="project-3">
+            <h3 class="project-name">
+              <a
+                class="project-anchor"
+                href="https://karthikeyanselvam18.github.io/amazon-website/"
+                target="_blank"
+                >Amazon clone</a
+              >
+            </h3>
+          </div>
+          <div class="project-4">
+            <h3 class="project-name">
+              <a
+                class="project-anchor"
+                href="https://karthikeyanselvam18.github.io/amazon-website/"
+                target="_blank"
+                >Amazon clone</a
+              >
+            </h3>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
