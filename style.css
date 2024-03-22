@@ -27,7 +27,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 15px 25px;
   position: sticky;
   top: 0;
   left: 0;
@@ -43,6 +43,11 @@ header {
 .navbar li a {
   text-decoration: none;
   color: black;
+  transition: color .25s;
+}
+
+.navbar li:hover a{
+  color: var(--primary-orange);
 }
 
 #menu-btn,
@@ -170,7 +175,7 @@ section {
 .education-details .line {
   width: 10px;
   height: calc(5 * 90px);
-  border-radius:10px ;
+  border-radius: 10px;
   background-color: var(--secondary-background);
   position: relative;
 }
@@ -229,8 +234,8 @@ section {
 
 .education-depth-details div span {
   color: var(--light-grey);
-  text-wrap: stable;
-  width: 200px;
+  text-wrap: wrap;
+  width: 250px;
 }
 
 .education-container div:nth-child(odd) span {
@@ -240,7 +245,7 @@ section {
   text-align: left;
 }
 
-b{
+b {
   color: var(--primary-orange);
 }
 
@@ -251,8 +256,6 @@ b{
 .education-image-container img {
   width: 100%;
 }
-
-
 
 .project-section {
   display: flex;
@@ -422,7 +425,7 @@ b{
     max-width: 100%;
   }
 
-  .education-image-container{
+  .education-image-container {
     display: none;
   }
   .education-depth-details div:nth-child(odd)::after {
@@ -436,23 +439,24 @@ b{
     right: calc(50% + 15px);
   }
   .education-depth-details div:nth-child(2) {
-    top: 135px;
+    top: 140px;
     left: calc(50% + 15px);
   }
-  
+
   .education-depth-details div:nth-child(3) {
-    bottom: 185px;
+    bottom: 190px;
     right: calc(50% + 15px);
   }
-  
+
   .education-depth-details div:nth-child(4) {
     bottom: 90px;
     left: calc(50% + 15px);
   }
 
   .education-depth-details div span {
-    font-size: .8rem;
-    text-wrap: nowrap;
+    font-size: .9rem;
+    text-wrap: wrap;
+    width: 250px;
   }
 
   .project-container {
@@ -461,6 +465,7 @@ b{
 }
 
 @media (max-width: 650px) {
+
   #menu-btn-label {
     display: inline;
   }
@@ -471,16 +476,18 @@ b{
 
   .navbar {
     position: absolute;
+    border-top: 1px solid rgb(34, 34, 34);
     flex-direction: column;
     background-color: var(--primary-blue);
     top: var(--header-height);
     left: 0;
     width: 100%;
-    padding-block: 10px;
     align-items: center;
     transform: scaleY(0);
+    gap:10px;
     transform-origin: top;
     transition: transform 0.25s;
+    padding-block: 10px;
   }
   .hero-section {
     flex-direction: column;
@@ -499,7 +506,7 @@ b{
     font-size: 1.5rem;
   }
   .hero-text h3 {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   #hero-name-text {
@@ -523,7 +530,7 @@ b{
   }
 
   .education-depth-details div span {
-    font-size: .7rem;
+    font-size: 0.7rem;
     text-wrap: wrap;
     width: 150px;
   }
