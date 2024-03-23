@@ -62,3 +62,4 @@ navbarCheckBox.addEventListener("change", () => {
     navbarCheckBoxLabel.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
   else navbarCheckBoxLabel.innerHTML = `<i class="fa-solid fa-bars"></i>`;
 });
+

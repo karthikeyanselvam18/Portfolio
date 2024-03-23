@@ -18,6 +18,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
   </head>
 
   <body>
@@ -36,7 +40,8 @@
       </ul>
     </header>
     <main>
-      <section class="hero-section">
+      <section class="hero-section" id="hero">
+        <div id="overlay"></div>
         <div class="hero-image-container">
           <img class="hero-image" src="assest/hero.png" alt="" />
         </div>
@@ -63,7 +68,7 @@
         </div>
       </section>
 
-      <section class="about-section">
+      <section class="about-section" data-aos="flip-up">
         <div class="about-section-image-container">
           <img src="assest/about.png" alt="" />
         </div>
@@ -84,7 +89,7 @@
       <section class="education-section" id="education">
         <h1 class="education-title section-title">Education</h1>
         <div class="education-container">
-          <div class="education-details">
+          <div class="education-details" data-aos="fade-right">
             <div class="line">
               <div class="education-depth-details">
                 <div class="course">
@@ -109,7 +114,7 @@
               </div>
             </div>
           </div>
-          <div class="education-image-container">
+          <div class="education-image-container" data-aos="fade-left">
             <img src="assest/education.png" alt="" />
           </div>
         </div>
@@ -118,7 +123,7 @@
       <section class="project-section" id="project">
         <h1 class="project-title section-title">Projects</h1>
         <div class="project-container">
-          <div class="project-1">
+          <div class="project-1" data-tilt>
             <h3 class="project-name">
               <a
                 class="project-anchor"
@@ -128,7 +133,7 @@
               >
             </h3>
           </div>
-          <div class="project-2">
+          <div class="project-2" data-tilt>
             <h3 class="project-name">
               <a
                 class="project-anchor"
@@ -138,7 +143,7 @@
               >
             </h3>
           </div>
-          <div class="project-3">
+          <div class="project-3" data-tilt>
             <h3 class="project-name">
               <a
                 class="project-anchor"
@@ -148,7 +153,7 @@
               >
             </h3>
           </div>
-          <div class="project-4">
+          <div class="project-4" data-tilt>
             <h3 class="project-name">
               <a
                 class="project-anchor"
@@ -161,7 +166,7 @@
         </div>
       </section>
 
-      <section class="resume-section" id="resume">
+      <section class="resume-section" id="resume" data-aos="flip-down">
         <h1 class="resume-title section-title">Resume</h1>
         <div class="resume-container">
           <div class="resume-image-container">
@@ -177,5 +182,131 @@
       </section>
     </main>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init();
+      });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+      integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("overlay", {
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+    color: {
+      value: "#ffffff",
+    },
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 0,
+        color: "#000000",
+      },
+      polygon: {
+        nb_sides: 5,
+      },
+      image: {
+        src: "img/github.svg",
+        width: 100,
+        height: 100,
+      },
+    },
+    opacity: {
+      value: 0.5,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false,
+      },
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 40,
+        size_min: 0.1,
+        sync: false,
+      },
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1,
+    },
+    move: {
+      enable: true,
+      speed: 6,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200,
+      },
+    },
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "grab",
+      },
+      onclick: {
+        enable: true,
+        mode: "push",
+      },
+      resize: true,
+    },
+    modes: {
+      grab: {
+        distance: 140,
+        line_linked: {
+          opacity: 1,
+        },
+      },
+      bubble: {
+        distance: 400,
+        size: 40,
+        duration: 2,
+        opacity: 8,
+        speed: 3,
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4,
+      },
+      push: {
+        particles_nb: 4,
+      },
+      remove: {
+        particles_nb: 2,
+      },
+    },
+  },
+  retina_detect: true,
+});
+      
+    </script>
   </body>
 </html>
