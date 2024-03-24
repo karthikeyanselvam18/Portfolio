@@ -33,9 +33,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 999;
 }
 
@@ -66,6 +67,7 @@ header {
 }
 main {
   padding-inline: 10px;
+  padding-top: var(--header-height);
 }
 
 section {
@@ -134,7 +136,8 @@ section {
   background-color: var(--accent-background);
   padding-block: 10px;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
+
 }
 
 .about-section-image-container {
@@ -505,10 +508,9 @@ b {
 }
 
 @media (max-width: 650px) {
-  
-header{
-  padding-inline: 20px;
-}
+  header {
+    padding-inline: 20px;
+  }
 
   #menu-btn-label {
     display: inline;
@@ -526,7 +528,6 @@ header{
   .navbar li:hover a {
     background-color: initial;
   }
-
 
   .navbar {
     position: absolute;
