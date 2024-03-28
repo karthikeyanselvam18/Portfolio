@@ -136,8 +136,7 @@ section {
   background-color: var(--accent-background);
   padding-block: 10px;
   border-radius: 10px;
-  margin-bottom: 20px; 
-
+  margin-bottom: 20px;
 }
 
 .about-section-image-container {
@@ -364,10 +363,10 @@ b {
   background: url(assest/todo.jpg) center/cover;
 }
 .project-3 {
-  background: url(assest/amazon.jpg) center/cover;
+  background: url(assest/tic-tac-toe.jpg) center/cover;
 }
 .project-4 {
-  background: url(assest/netflix.jpg) center/cover;
+  background: url(assest/amazon.jpg) center/cover;
 }
 
 .resume-section {
