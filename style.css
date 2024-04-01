@@ -32,12 +32,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
   padding: 15px 25px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
+}
+
+header h1 {
+  text-shadow: 2px 2px 2px black;
 }
 
 .navbar {
@@ -48,9 +53,9 @@ header {
 
 .navbar li a {
   text-decoration: none;
-  color: black;
+  color: white;
   transition: color 0.25s, background-color 0.25s, border-color 0.25s;
-  border: 1px solid black;
+  border: none;
   padding: 5px 10px;
   border-radius: 50px;
 }
@@ -360,13 +365,13 @@ b {
   background: url(assest/jokes.jpg) center/cover;
 }
 .project-2 {
-  background: url(assest/todo.jpg) center/cover;
+  background: url(assest/todo.jpeg) top/cover;
 }
 .project-3 {
-  background: url(assest/tic-tac-toe.jpg) center/cover;
+  background: url(assest/t3.jpeg) top/cover;
 }
 .project-4 {
-  background: url(assest/amazon.jpg) center/cover;
+  background: url(assest/popcorn-paradox.jpeg) top/cover;
 }
 
 .resume-section {
@@ -532,7 +537,7 @@ b {
     position: absolute;
     border-top: 1px solid rgb(34, 34, 34);
     flex-direction: column;
-    background-color: #00aeffcc;
+    background-color: #00aeffee;
     top: var(--header-height);
     left: 0;
     width: 100%;
